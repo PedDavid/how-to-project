@@ -1,5 +1,5 @@
 function sum (lhs, rhs) {
-	return null 
+	return lhs + rhs
 }
 
 module.exports = sum

@@ -8,3 +8,6 @@ add simple test
 	TDD - Test Driven Development
 	write test
 	fail test
+	write code that complies with test
+	fail test? correct bug
+	pass test? continue!
