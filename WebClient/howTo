@@ -21,3 +21,5 @@ finish git flow feature
 	git merge --no-ff feature/x -> merge always creates a new commit object, even if the merge could be performed with a fast-forward
 	git branch -d feature/x		-> delete branch
 	git push origin develop
+
+git log --all --decorate --oneline --graph	-> show git flow prettiness with "A DOG"
