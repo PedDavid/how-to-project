@@ -1,3 +1,4 @@
 Creating WebClient (javascript)
 Install yarn/npm
-yarn init
+init project -> yarn init
+create .gitignore -> ingore node_modules/
