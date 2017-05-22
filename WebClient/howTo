@@ -2,3 +2,11 @@ Creating WebClient (javascript)
 Install yarn/npm
 init project -> yarn init
 create .gitignore -> ingore node_modules/
+add test support -> yarn add --dev jester
+	TDD - Test Driven Development
+	write test
+	fail test
+	write code that complies with test
+	fail test? correct bug
+	pass test? continue!
+add simple test
