@@ -25,3 +25,10 @@ finish git flow feature
 git log --all --decorate --oneline --graph	-> show git flow prettiness with "A DOG"
 
 yarn add --dev standard -> add standard linter
+
+Add Continuous Integration
+	using Travis, and travis integration with github
+	.travis.yml -> specify build process
+		use travis cli to encrypt sensitive data
+		set up notifications (ex: slack)
+		set up github protected branches
