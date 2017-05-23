@@ -23,3 +23,5 @@ finish git flow feature
 	git push origin develop
 
 git log --all --decorate --oneline --graph	-> show git flow prettiness with "A DOG"
+
+yarn add --dev standard -> add standard linter

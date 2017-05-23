@@ -5,9 +5,16 @@
   "author": "PedDavid",
   "license": "MIT",
   "scripts": {
-    "test": "jest"
+    "test": "standard && jest"
   },
   "devDependencies": {
-    "jest": "^20.0.3"
+    "jest": "^20.0.3",
+    "standard": "^10.0.2"
+  },
+  "standard": {
+    "globals": [
+      "test",
+      "expect"
+    ]
   }
 }
