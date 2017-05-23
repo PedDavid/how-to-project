@@ -1,0 +1,1 @@
+[![Build Status](https://travis-ci.org/PedDavid/how-to-project.svg?branch=develop)](https://travis-ci.org/PedDavid/how-to-project)
