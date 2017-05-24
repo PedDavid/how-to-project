@@ -2,4 +2,11 @@ function sum (lhs, rhs) {
   return lhs + rhs
 }
 
-module.exports = sum
+function multiply (lhs, rhs) {
+  return lhs * rhs
+}
+
+module.exports = {
+  sum,
+  multiply
+}
