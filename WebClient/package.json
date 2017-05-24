@@ -6,7 +6,7 @@
   "license": "MIT",
   "scripts": {
     "test": "standard && jest",
-    "test:coverage": "standard && jest --coverage"
+    "test:coverage": "standard && jest --coverage --no-cache"
   },
   "devDependencies": {
     "jest": "^20.0.3",
