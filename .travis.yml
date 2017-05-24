@@ -7,7 +7,7 @@ install:
 - curl -o- -L https://yarnpkg.com/install.sh | bash
 - export PATH=$HOME/.yarn/bin:$PATH
 before_script: yarn
-script: 
+script:
 - yarn test:coverage
 - sonar-scanner
 after_success:
@@ -20,9 +20,11 @@ addons:
   code_climate:
     repo_token: 46302c64da23ac593c40fe892e84cbeed06295964509b829816fe0d6d589b3a1
   sonarqube:
-    organization: "peddavid-github"
+    organization: peddavid-github
     token:
       secure: VLtdRhwv7/g3hci4bMLTXnuPUYYVkEvMD5nedG7otxKVoVkgIUDCQZ411h4Reaxc/N5hqaRZLWhciTkaRNsNxNuOx339BTQphPkRSUHYbgHPaILQpUFa5uWxvfa/gDpNnFPLMc8J1ahfRIvuwxA1VvKde/ltvWUtuUmAj/BQHyh94NqTx6bmCuVuX80hb9x9mjgeoBcf6JYzrZA83sOMEJx4WYKZjtu+dwpkpUCkUwVSBCF1FtReTSVZlZZ7OPfNLaG31yX1a8VmcwESUnbFv1tfdo01QngVo7Wx7SjszNXQKq5X+mZaYoH2SV3WBO9FDQpOy1sJ5EeAiyhwKM39sM6/Sbd2ICj9jKlxSAV0XQEBxHygKwh8Vvf3yipfE5F/7oP5mdGo0dPi7eTNlkFEIIzshryiDhwGeyO9Q40mNmTkUb0BVKyn7QZvFU/TSLL43VO0mkI1g1826RoKqLLjEdqhHwlKNXJSkvoeZ0CUIj1J+qqtWq0m35riB3TYJ/RAG+sB4Pwv9uOurr9gI8B5IgLP4jaWgdGgqDky+OVBv6DnmeHeJX8fkQ7Fg8BkEkOkEkTzk9HSOyU5ZerA7fCL4DQWw1XEESqmBeHxxAAMY2xwlcsQ6CmL45pa/CNSwxSbZlw2Z/wbz4JEuhr3PBerHFtChOz8otDxmkGklDXDVXg=
+    github_token:
+      secure: Ez3nulTwuFIfznJuEIB8O/fMyPGoVh3YxMjNnyWnXVU0LCa1UQuw59NDi/sVSJ/ddt84HXxrvz6Ua2KS72plqNaT684bb25fnp7q3HjjWpz4MzWW6gyOwFi8nj4wMCDGz7MDvkm1TXdzfWPkOcInNLCWlTRHk0xLUh9uXzloaFFUWgZAq/ErA0ouTSIuxzbzn/GseWrYgeWJHyMc9/SP4gclVLcaeV4kySOVf7WHnCP92vO/syNrraqAoRd2yskL/dO1B0wO4S85r1rR6J3Y8Le96XdzetGXNPRdp7iAUW771P6IJf+Y/oFJmKVs+C6WRBdoHTBjICv3GgtfEt5npyuDAB9a3L6HwhMNDqGFHX+ybINA08jr2xLBosx9JKP77PekUZLrjIepZWrO41MgAZkoRqtbr/Zbap1aCGHW7HJd2Nb0FkV/4bA6bHVVGXkT4+2jfk9a1PVeTC2MnrJmbw19JoedxQUAFC6aJwMLspQqDIkGGDIc/XO1FJrVSGkGWp5ehOW1QbtsbMQNYVeAsRLvpejLc0ZDG6IGVKqVahvPl/j0tXxlMihb8jBKqA/g3Qc3pRr/hwyS2E+1ZmCrSrFBgxuf+LOYptd6AhVu8HgM6bJpvXSNaviQfcLcFqAX9Etaj66XS3gvK3k90G+rmww6P8h/mK71Vf6K97zgk9o=
     branches:
-      - develop
-      - /^feature\/.*$/
+    - develop
+    - "/^feature\/.*$/"
