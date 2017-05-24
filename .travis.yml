@@ -1,3 +1,4 @@
+dist: trusty
 language: node_js
 node_js:
 - node
@@ -6,13 +7,22 @@ install:
 - curl -o- -L https://yarnpkg.com/install.sh | bash
 - export PATH=$HOME/.yarn/bin:$PATH
 before_script: yarn
-script: yarn test:coverage
+script: 
+- yarn test:coverage
+- sonar-scanner
 after_success:
-  - yarn global add codeclimate-test-reporter
-  - codeclimate-test-reporter < coverage/lcov.info
+- yarn global add codeclimate-test-reporter
+- codeclimate-test-reporter < coverage/lcov.info
 notifications:
   slack:
     secure: UNMH/qCujYSZn96titckiBpYSpPKRBjUjlTz0Xzb0zLmgkDdzvPPPFRKefugg7ww+nMftut/jKGLTHhpKHDCsZ46JI+h/REqTWu2uD5bmimbxZXqn3nTf6p+yxJPvhgv0lfkSxFDA0XG498z+UkoIMsSK6wdX4DdbkqDi3sT3E29sP7LVSBFydh8HQXYplO8XWWpgw/FB6g064XEw3RYRlm+ffYsbF8QXEljGXSTmma0oTqOkmuBHSygapqfFwuNf1Rf3rrAs8R+LKfYni6td/HZFyO50Yja1S5VJb1NeBULC02GmrPix2F0dspvcj3puMwoPYQxfvciB26qwJKu3ULG7lZr69mYe2PCfuT5HTVFOpfq0ABU9LZ3Akh3gUwI/P0CeLtj88/WyrkUcKmAl3EYwXykf0grnP67HGvxxpsGJChcUqqpcosqsZhGBbhI8L7Mn16u3WhpauWIwM6yLtNWK00WrRubrAzcCzd2CiGjjeATxb+4GRVhJ3RvABCCoKw7L8LzhFdFLs6iNju2oCbUi3+6zwK/VwyprZZZbPBVG3xv7/rul6UEfc5ywIJwe+4k6DpWRC4XEKS+Y1wjAQYVJJrYtY8YQPix9G0WyU6EnNLmVr668m39GTvqtyJWl2VT8gDT8tNyHenNdb+WunhYIBvezc9MlvwSPYSElW8=
 addons:
   code_climate:
     repo_token: 46302c64da23ac593c40fe892e84cbeed06295964509b829816fe0d6d589b3a1
+  sonarqube:
+    organization: "peddavid-github"
+    token:
+      secure: VLtdRhwv7/g3hci4bMLTXnuPUYYVkEvMD5nedG7otxKVoVkgIUDCQZ411h4Reaxc/N5hqaRZLWhciTkaRNsNxNuOx339BTQphPkRSUHYbgHPaILQpUFa5uWxvfa/gDpNnFPLMc8J1ahfRIvuwxA1VvKde/ltvWUtuUmAj/BQHyh94NqTx6bmCuVuX80hb9x9mjgeoBcf6JYzrZA83sOMEJx4WYKZjtu+dwpkpUCkUwVSBCF1FtReTSVZlZZ7OPfNLaG31yX1a8VmcwESUnbFv1tfdo01QngVo7Wx7SjszNXQKq5X+mZaYoH2SV3WBO9FDQpOy1sJ5EeAiyhwKM39sM6/Sbd2ICj9jKlxSAV0XQEBxHygKwh8Vvf3yipfE5F/7oP5mdGo0dPi7eTNlkFEIIzshryiDhwGeyO9Q40mNmTkUb0BVKyn7QZvFU/TSLL43VO0mkI1g1826RoKqLLjEdqhHwlKNXJSkvoeZ0CUIj1J+qqtWq0m35riB3TYJ/RAG+sB4Pwv9uOurr9gI8B5IgLP4jaWgdGgqDky+OVBv6DnmeHeJX8fkQ7Fg8BkEkOkEkTzk9HSOyU5ZerA7fCL4DQWw1XEESqmBeHxxAAMY2xwlcsQ6CmL45pa/CNSwxSbZlw2Z/wbz4JEuhr3PBerHFtChOz8otDxmkGklDXDVXg=
+    branches:
+      - develop
+      - /feature\/([A-Za-z0-9\-\_])+/
