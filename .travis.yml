@@ -27,4 +27,4 @@ addons:
       secure: Ez3nulTwuFIfznJuEIB8O/fMyPGoVh3YxMjNnyWnXVU0LCa1UQuw59NDi/sVSJ/ddt84HXxrvz6Ua2KS72plqNaT684bb25fnp7q3HjjWpz4MzWW6gyOwFi8nj4wMCDGz7MDvkm1TXdzfWPkOcInNLCWlTRHk0xLUh9uXzloaFFUWgZAq/ErA0ouTSIuxzbzn/GseWrYgeWJHyMc9/SP4gclVLcaeV4kySOVf7WHnCP92vO/syNrraqAoRd2yskL/dO1B0wO4S85r1rR6J3Y8Le96XdzetGXNPRdp7iAUW771P6IJf+Y/oFJmKVs+C6WRBdoHTBjICv3GgtfEt5npyuDAB9a3L6HwhMNDqGFHX+ybINA08jr2xLBosx9JKP77PekUZLrjIepZWrO41MgAZkoRqtbr/Zbap1aCGHW7HJd2Nb0FkV/4bA6bHVVGXkT4+2jfk9a1PVeTC2MnrJmbw19JoedxQUAFC6aJwMLspQqDIkGGDIc/XO1FJrVSGkGWp5ehOW1QbtsbMQNYVeAsRLvpejLc0ZDG6IGVKqVahvPl/j0tXxlMihb8jBKqA/g3Qc3pRr/hwyS2E+1ZmCrSrFBgxuf+LOYptd6AhVu8HgM6bJpvXSNaviQfcLcFqAX9Etaj66XS3gvK3k90G+rmww6P8h/mK71Vf6K97zgk9o=
     branches:
     - develop
-    - "/^feature\/.*$/"
+    - /^feature\/.*$/
