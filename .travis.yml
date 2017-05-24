@@ -24,5 +24,5 @@ addons:
     token:
       secure: VLtdRhwv7/g3hci4bMLTXnuPUYYVkEvMD5nedG7otxKVoVkgIUDCQZ411h4Reaxc/N5hqaRZLWhciTkaRNsNxNuOx339BTQphPkRSUHYbgHPaILQpUFa5uWxvfa/gDpNnFPLMc8J1ahfRIvuwxA1VvKde/ltvWUtuUmAj/BQHyh94NqTx6bmCuVuX80hb9x9mjgeoBcf6JYzrZA83sOMEJx4WYKZjtu+dwpkpUCkUwVSBCF1FtReTSVZlZZ7OPfNLaG31yX1a8VmcwESUnbFv1tfdo01QngVo7Wx7SjszNXQKq5X+mZaYoH2SV3WBO9FDQpOy1sJ5EeAiyhwKM39sM6/Sbd2ICj9jKlxSAV0XQEBxHygKwh8Vvf3yipfE5F/7oP5mdGo0dPi7eTNlkFEIIzshryiDhwGeyO9Q40mNmTkUb0BVKyn7QZvFU/TSLL43VO0mkI1g1826RoKqLLjEdqhHwlKNXJSkvoeZ0CUIj1J+qqtWq0m35riB3TYJ/RAG+sB4Pwv9uOurr9gI8B5IgLP4jaWgdGgqDky+OVBv6DnmeHeJX8fkQ7Fg8BkEkOkEkTzk9HSOyU5ZerA7fCL4DQWw1XEESqmBeHxxAAMY2xwlcsQ6CmL45pa/CNSwxSbZlw2Z/wbz4JEuhr3PBerHFtChOz8otDxmkGklDXDVXg=
     branches:
-    - develop
-    - /feature\/([A-Za-z0-9\-\_])+/
+      - develop
+      - /feature\/([A-Za-z0-9\-\_])+/
