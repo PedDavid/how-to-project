@@ -5,7 +5,8 @@
   "author": "PedDavid",
   "license": "MIT",
   "scripts": {
-    "test": "standard && jest"
+    "test": "standard && jest",
+    "test:coverage": "standard && jest --coverage"
   },
   "devDependencies": {
     "jest": "^20.0.3",

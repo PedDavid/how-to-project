@@ -6,7 +6,13 @@ install:
 - curl -o- -L https://yarnpkg.com/install.sh | bash
 - export PATH=$HOME/.yarn/bin:$PATH
 before_script: yarn
-script: yarn test
+script: yarn test:coverage
+after_success:
+  - yarn global add codeclimate-test-reporter
+  - codeclimate-test-reporter < coverage/lcov.info
 notifications:
   slack:
     secure: UNMH/qCujYSZn96titckiBpYSpPKRBjUjlTz0Xzb0zLmgkDdzvPPPFRKefugg7ww+nMftut/jKGLTHhpKHDCsZ46JI+h/REqTWu2uD5bmimbxZXqn3nTf6p+yxJPvhgv0lfkSxFDA0XG498z+UkoIMsSK6wdX4DdbkqDi3sT3E29sP7LVSBFydh8HQXYplO8XWWpgw/FB6g064XEw3RYRlm+ffYsbF8QXEljGXSTmma0oTqOkmuBHSygapqfFwuNf1Rf3rrAs8R+LKfYni6td/HZFyO50Yja1S5VJb1NeBULC02GmrPix2F0dspvcj3puMwoPYQxfvciB26qwJKu3ULG7lZr69mYe2PCfuT5HTVFOpfq0ABU9LZ3Akh3gUwI/P0CeLtj88/WyrkUcKmAl3EYwXykf0grnP67HGvxxpsGJChcUqqpcosqsZhGBbhI8L7Mn16u3WhpauWIwM6yLtNWK00WrRubrAzcCzd2CiGjjeATxb+4GRVhJ3RvABCCoKw7L8LzhFdFLs6iNju2oCbUi3+6zwK/VwyprZZZbPBVG3xv7/rul6UEfc5ywIJwe+4k6DpWRC4XEKS+Y1wjAQYVJJrYtY8YQPix9G0WyU6EnNLmVr668m39GTvqtyJWl2VT8gDT8tNyHenNdb+WunhYIBvezc9MlvwSPYSElW8=
+addons:
+  code_climate:
+    repo_token: 46302c64da23ac593c40fe892e84cbeed06295964509b829816fe0d6d589b3a1
